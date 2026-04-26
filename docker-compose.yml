@@ -1,0 +1,11 @@
+services:
+  app:
+    build:
+      context: ./dorama_alem
+      args:
+        SUPABASE_URL: ${SUPABASE_URL:-https://hxnrxuanbikmdyrdyvah.supabase.co}
+        SUPABASE_ANON_KEY: ${SUPABASE_ANON_KEY:-eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh4bnJ4dWFuYmlrbWR5cmR5dmFoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjMzMDI4NjgsImV4cCI6MjA3ODg3ODg2OH0.iVL2yqkJdyFwH0uafR1n0hb3knwJndbFVjHhGr1UwD4}
+    container_name: dorama_alem_app
+    restart: unless-stopped
+    ports:
+      - "8080:80"
